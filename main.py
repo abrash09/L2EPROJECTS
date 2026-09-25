@@ -7,15 +7,23 @@ def main ():
     func.load_expenses
 
 while True:
-    print("1.  Add an expense")
-    print("2.  View all expenses")
-    print("3. Calculate total spending")
-    print("4. Calculate spending by category")
-    print("5. delete an expense")
-    print("6. Exit")
+    print("""
+    =====EXPENSES TRACKER=====
+
+    [1]. Add an expense
+    [2]. View all expenses
+    [3]. Calculate total spending
+    [4]. Calculate spending by category
+    [5]. delete an expense
+    [6]. Exit""")
+
     choice = input("Enter you preffered choice? ")
     if choice == "1":
-        expense.add_expense(expenses)
+        amount = float(input("Enter amount "))
+        category = input("Enter category ")
+        description = input("Enter description ")
+            
+        expense.add_expense(expenses, amount, category, description)
         func.save_expenses(expenses)
         print()
     elif choice == "2":
@@ -36,6 +44,7 @@ while True:
     
     else:
         print("Invalid choice, please try again.\n")
+    input("click enter to continue ")
     if __name__ == "_main_":
         main()
     

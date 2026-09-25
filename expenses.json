@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-[{"amount": 34.0, "category": "hkf", "description": "lkhte"}, {"amount": 43.0, "category": "trew", "description": "newr"}]
-=======
-[{"amount": 3456.0, "category": "sadfg", "description": "uytr"}, {"amount": 2345.0, "category": "lkjh", "description": "mnbv"}, {"amount": 432.0, "category": "uyt", "description": "gfds"}, {"amount": 567.0, "category": "kjht", "description": "qsxcv"}]
->>>>>>> a6d363544e8c0866f60770d8dd04237f287c0dbf
+[
+    {
+        "amount": 654.0,
+        "category": "trdfs",
+        "description": "hfdknc"
+    }
+]

@@ -1,23 +1,21 @@
 
-def add_expense(expenses):
+def add_expense(expenses, amount, category, description):
    # request for expense 🤭
-    amount = float(input("Enter amount "))
-    category = input("Enter category ")
-    description = input("Enter description ")
-    
     expense = {"amount": amount, "category": category, "description": description }
     expenses.append(expense)
     print("Expense added & saved successfully 😍\n")
     print()
+
 
 # user view expenses func
 def View_all_expenses (expenses):
     if not expenses:
         print("there are no expenses, Enter an expense 🥸")
     else:
-        for items in expenses:
-            print(f"Amount: {items['amount']} | Category: {items['category']} | Description: {items['description']}")
-    print()
+        print(f"{'NO':>5} | {'ANOUNT':<15} | {'CATEGORY' :<15} | DESCRIPTION")     
+        for i in range(len(expenses)):
+            print(f" {i+1:<5}. | {expenses[i]['amount']:<15}: {expenses[i]['category']:<15} | {expenses[i]['description']}")
+        print("-"*70)
 
 # calculate total expense func
 def calculate_total(expenses):
@@ -29,6 +27,9 @@ def calculate_total(expenses):
              total = total + cal_expense['amount']
         print(f"Total expense balance: ${total}\n")
     print()
+
+
+
 # func for calculate_by_category
 def calculate_by_category(expenses):
     if not expenses:
@@ -57,4 +58,3 @@ def delete_expense (expenses):
     final_delete = (user_choice - 1)
     expenses.pop(final_delete)
     print("Expense delete successfully 😍")
-   
